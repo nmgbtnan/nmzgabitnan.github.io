@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
+import '../css/tooplate-kool-form-pack.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FaGithub, FaFacebook, FaLinkedin, FaArrowRight } from "react-icons/fa";
 import { BsBox } from "react-icons/bs";
-import '../css/tooplate-kool-form-pack.css';
-import 'bootstrap/dist/css/bootstrap.css';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 // import resumeDL from '../../../public/files/resume/Resume_-_Nemuel_M_Gabitanan_Jr_-_09-08-2023.pdf';
