@@ -15,12 +15,12 @@ function Contact() {
                         <div className="col-lg-6 col-md-6 col-12">
                             <Form action="#" method="get" className="contact-form webform" role="form">
                                 <Form.Group className="d-flex flex-column-reverse">
-                                        <Form.Control type="text" className="form-control" name="cf-name" id="cf-name" placeholder="Your Name" />
-                                        <Form.Label htmlFor="cf-name" className="webform-label">Full Name</Form.Label>
+                                    <Form.Control type="text" className="form-control" name="cf-name" id="cf-name" placeholder="Your Name" />
+                                    <Form.Label htmlFor="cf-name" className="webform-label">Full Name</Form.Label>
                                 </Form.Group>
                                 <Form.Group className="d-flex flex-column-reverse">
-                                        <Form.Control type="email" className="form-control" name="cf-email" id="cf-email" placeholder="Your Email" />
-                                        <Form.Label htmlFor="cf-email" className="webform-label">Email</Form.Label>
+                                    <Form.Control type="email" className="form-control" name="cf-email" id="cf-email" placeholder="Your Email" />
+                                    <Form.Label htmlFor="cf-email" className="webform-label">Email</Form.Label>
                                 </Form.Group>
 
                                 <Form.Group className="d-flex flex-column-reverse">
