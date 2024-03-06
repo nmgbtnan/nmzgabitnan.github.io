@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import '../css/tooplate-kool-form-pack.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import Image from 'react-bootstrap/Image';
 import introPic from '../images/nems3.jpg';
 import introVid from '../files/videos/video.mp4';
 
@@ -13,7 +14,7 @@ function Home() {
                     <div className="container">
                         <div className="row">
                             <div className="mx-auto col-lg-4 col-md-4 col-8">
-                                <img src={ introPic } className="intro-img img-fluid" alt="nems' Resume HTML Template" />
+                                <Image src={introPic} alt="nems' Resume HTML Template" fluid />
                             </div>
                             <div className="d-flex flex-column justify-content-center align-items-center col-lg-7 col-md-7 col-12">
                                 <div className="hero-text">
@@ -29,8 +30,7 @@ function Home() {
                     <div className="video-wrap">
                         <video autoplay="" loop="" muted="" className="custom-video" poster="">
                             <source src={introVid} type="video/mp4" />
-
-                                Your browser does not support the video tag.
+                            Your browser does not support the video tag.
                         </video>
                     </div>
                 </section>
