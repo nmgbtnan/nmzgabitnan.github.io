@@ -9,8 +9,6 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 // import resumeDL from '../../../public/files/resume/Resume_-_Nemuel_M_Gabitanan_Jr_-_09-08-2023.pdf';
 
-
-
 function Header() {
     const [show, setShow] = useState(false);
 
@@ -60,30 +58,9 @@ function Header() {
                 </div>
             </header>
 
-            <div className="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-                <div className="offcanvas-header">
-                    <button type="button" className="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
-                    <nav>
-                        <ul>
-                            <li class="nav-item">
-                                <a href="#intro" className="nav-link smoothScroll">Introduction</a>
-                            </li>
-                            <li class="nav-item">
-                                <Link to="/About#about" href="#" className="nav-link smoothScroll">About Me</Link>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#contact" className="nav-link smoothScroll">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-
             <Offcanvas className="offcanvas offcanvas-end" scroll tabindex="-1" id="offcanvasMenu" show={show} onHide={handleClose} placement="end">
                 <Offcanvas.Header closeButton>
-
+                    <h1>Menu</h1>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <nav>
