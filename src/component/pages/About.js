@@ -23,7 +23,7 @@ function About() {
                         </ul>
                     </div>
                     <div className="col-lg-4 mx-auto col-md-5 col-10">
-                        <Image src={aboutPic} alt="Ben's Resume HTML Template" fluid />
+                        <Image src={aboutPic} alt="This is the Primary picture" fluid />
                     </div>
                 </div>
                 <div className="row about-third">
