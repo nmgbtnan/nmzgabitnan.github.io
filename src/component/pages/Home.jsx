@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import introPic from '../images/nems3.jpg';
-import introVid from '../files/videos/video.mp4';
+import introVid from '../files/video.mp4';
 
 function Home() {
     return (
@@ -27,8 +27,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="video-wrap">
-                    <video autoplay loop muted className="custom-video" id="video">
-                        <source src={introVid} type="video/mp4" />
+                    <video src={introVid} autoPlay loop className="custom-video" id="video">
                         Your browser does not support the video tag.
                     </video>
                 </div>
