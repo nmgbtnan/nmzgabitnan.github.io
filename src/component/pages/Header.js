@@ -1,9 +1,13 @@
 import React from 'react';
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Contact from "../pages/Contact";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FaGithub, FaFacebook, FaLinkedin, FaArrowRight } from "react-icons/fa";
 import { BsBox } from "react-icons/bs";
 import '../css/tooplate-kool-form-pack.css';
 import 'bootstrap/dist/css/bootstrap.css';
+
 
 
 function Header() {
@@ -24,7 +28,7 @@ function Header() {
                                 <div className="vr"></div>
 
                                 <ul className="social-icon d-flex justify-content-center align-items-center mx-auto">
-                                    <span><Link to="intro" href="" className="smoothScroll site-header-text me-4 d-none d-lg-block">Introduction</Link></span>
+                                    <span><Link to="intro" href="#" className="smoothScroll site-header-text me-4 d-none d-lg-block">Introduction</Link></span>
                                     <span><Link to="about" href="#" className="smoothScroll site-header-text me-4 d-none d-lg-block">About</Link></span>
                                     <span><Link to="contact" href="#" className="smoothScroll site-header-text me-4 d-none d-lg-block">Contact Me</Link></span>
                                     <li className="social-icon-item">
@@ -40,7 +44,7 @@ function Header() {
                                     </li>
                                 </ul>
                                 <div>
-                                    <Link to="../../files/resume/Resume_-_Nemuel_M_Gabitanan_Jr_-_09-08-2023.pdf" href="#" download className="custom-btn custom-border-btn btn" target="_blank">Download CV
+                                    <Link to="../../files/resume/Resume_-_Nemuel_M_Gabitanan_Jr_-_09-08-2023.pdf" href="#" download className="custom-btn custom-border-btn" target="_blank">Download CV
                                         <FaArrowRight />
                                     </Link>
                                 </div>
@@ -71,7 +75,9 @@ function Header() {
                 </div>
             </div>
             <Routes>
-                <Route path="/" element="" />
+                <Route path="#intro" element={<Home />} />
+                <Route path="#about" element={<About />} />
+                <Route path="#contact" element={<Contact />} />
             </Routes>
         </Router>
     );
