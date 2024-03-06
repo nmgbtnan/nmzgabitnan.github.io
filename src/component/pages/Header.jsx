@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import '../css/tooplate-kool-form-pack.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FaGithub, FaFacebook, FaLinkedin, FaArrowRight } from "react-icons/fa";
 import { BsBox } from "react-icons/bs";
@@ -45,7 +46,7 @@ function Header() {
                                 </li>
                             </ul>
                             <div>
-                                <Link to="../../../public/files/resume/Resume_-_Nemuel_M_Gabitanan_Jr_-_09-08-2023.pdf" href="#" download className="custom-btn custom-border-btn" target="_blank">Download CV
+                                <Link to="../../../public/files/resume/Resume_-_Nemuel_M_Gabitanan_Jr_-_09-08-2023.pdf" href="#" download="Nemuel_M_Gabitanan_Jr_-_Resume.pdf" className="custom-btn custom-border-btn" target="_blank">Download CV
                                     <FaArrowRight />
                                 </Link>
                             </div>
