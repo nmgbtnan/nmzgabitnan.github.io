@@ -78,3 +78,4 @@ npm install react-router-dom
 npm install react-icons --save
 npm install file-saver              ====>uninstalled: npm uninstall file-saver
 npm install hamburger-react         ====>uninstalled: npm uninstall hamburger-react
+npm i @emailjs/browser
