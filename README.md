@@ -76,6 +76,15 @@ npm install bootstrap
 npm install react-bootstrap bootstrap
 npm install react-router-dom
 npm install react-icons --save
-npm install file-saver              ====>uninstalled: npm uninstall file-saver
-npm install hamburger-react         ====>uninstalled: npm uninstall hamburger-react
+npm install file-saver                  ====>uninstalled: npm uninstall file-saver
+npm install hamburger-react             ====>uninstalled: npm uninstall hamburger-react
 npm i @emailjs/browser
+
+### Development plan
+pdf download
+email restriction               - done
+modal unnecesary design         - done
+burger button fix               - done
+media query - algorithm fix
+media query - bgm image resize
+programming skill list
