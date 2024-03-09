@@ -1,10 +1,10 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import '../css/tooplate-kool-form-pack.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FaGithub, FaFacebook, FaLinkedin, FaArrowRight } from "react-icons/fa";
 import { BsBox } from "react-icons/bs";
+import { GiHamburgerMenu } from "react-icons/gi";
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 // import resumeDL from '../../../public/files/resume/Resume_-_Nemuel_M_Gabitanan_Jr_-_09-08-2023.pdf';
@@ -14,6 +14,16 @@ function Header() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const PDF_FILE_URL = 'http://localhost:3000/public/files/resume/Resume_-_Nemuel_M_Gabitanan_Jr.pdf';
+    const fileDownload = (url) => {
+        const fileName = url.split("/").pop();
+        const aTag = document.createElement("a");
+        aTag.href = url;
+        aTag.setAttribute("download", fileName);
+        document.body.appendChild(aTag);
+        aTag.click();
+        aTag.remove();
+    }
     return (
         <Router>
             <header className="site-header">
@@ -35,44 +45,49 @@ function Header() {
                                 <li className="social-icon-item">
                                     <Link to="https://www.facebook.com/shirotenshiNmz/" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaFacebook /></Link>
                                 </li>
-
                                 <li className="social-icon-item">
                                     <Link to="https://github.com/nmgbtnan" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaGithub /></Link>
                                 </li>
-
                                 <li className="social-icon-item">
                                     <Link to="https://www.linkedin.com/in/nemuel-gabitanan-jr-533705276/?trk=nav_responsive_tab_profile_pic&originalSubdomain=ph" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaLinkedin /></Link>
                                 </li>
                             </ul>
                             <div>
-                                <Link to="../../../public/files/resume/Resume_-_Nemuel_M_Gabitanan_Jr_-_09-08-2023.pdf" href="#" download className="custom-btn custom-border-btn" target="_blank">Download CV
+                                <Link to="http://localhost:3000/public/files/resume/Resume_-_Nemuel_M_Gabitanan_Jr.pdf" href="#" onclick={() => { fileDownload(PDF_FILE_URL) }} download className="custom-btn custom-border-btn" target="_blank">Download CV
                                     <FaArrowRight />
                                 </Link>
                             </div>
-                            <Link className="bi-list offcanvas-icon" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button" aria-controls="offcanvasMenu" />
-                            <Button className="custom-btn custom-border-btn" onClick={handleShow}>
-                                Menu
+                            <span> </span>
+                            <Button className="custom-btn custom-border-btn" id="burgerbutton" onClick={handleShow}>
+                                <GiHamburgerMenu />
                             </Button>
                         </div>
                     </div>
                 </div>
             </header>
 
-            <Offcanvas className="offcanvas offcanvas-end" scroll tabindex="-1" id="offcanvasMenu" show={show} onHide={handleClose} placement="end">
+            <Offcanvas scroll tabindex="-1" id="offcanvasMenu" show={show} onHide={handleClose} placement="end">
                 <Offcanvas.Header closeButton>
-                    <h1>Menu</h1>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <nav>
                         <ul>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <a href="#intro" className="nav-link smoothScroll">Introduction</a>
                             </li>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <a href="#about" className="nav-link smoothScroll">About Me</a>
                             </li>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <a href="#contact" className="nav-link smoothScroll">Contact</a>
+                            </li>
+                            <li className="social-icon-item">
+                                <hr />
+                                <span class="text-white">Stay connected: </span>
+                                <br />
+                                <Link to="https://www.facebook.com/shirotenshiNmz/" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaFacebook /></Link>
+                                <Link to="https://github.com/nmgbtnan" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaGithub /></Link>
+                                <Link to="https://www.linkedin.com/in/nemuel-gabitanan-jr-533705276/?trk=nav_responsive_tab_profile_pic&originalSubdomain=ph" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaLinkedin /></Link>
                             </li>
                         </ul>
                     </nav>
