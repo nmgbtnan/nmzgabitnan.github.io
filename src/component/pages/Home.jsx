@@ -1,6 +1,4 @@
 import React from 'react';
-import '../css/tooplate-kool-form-pack.css';
-import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import introPic from '../images/nems3.jpg';
@@ -27,7 +25,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="video-wrap">
-                    <video src={introVid} autoPlay loop className="custom-video" id="video">
+                    <video src={introVid} autoPlay muted loop className="custom-video" id="video">
                         Your browser does not support the video tag.
                     </video>
                 </div>

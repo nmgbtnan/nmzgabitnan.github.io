@@ -1,29 +1,23 @@
 import React, { useState } from 'react';
-import '../css/tooplate-kool-form-pack.css';
-import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FaGithub, FaFacebook, FaLinkedin, FaArrowRight } from "react-icons/fa";
+import { saveAs } from 'file-saver';
 import { BsBox } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-// import resumeDL from '../../../public/files/resume/Resume_-_Nemuel_M_Gabitanan_Jr_-_09-08-2023.pdf';
 
 function Header() {
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const PDF_FILE_URL = 'http://localhost:3000/public/files/resume/Resume_-_Nemuel_M_Gabitanan_Jr.pdf';
-    const fileDownload = (url) => {
-        const fileName = url.split("/").pop();
-        const aTag = document.createElement("a");
-        aTag.href = url;
-        aTag.setAttribute("download", fileName);
-        document.body.appendChild(aTag);
-        aTag.click();
-        aTag.remove();
+    const fileDownload = () => {
+        const pdfUrl = 'http://localhost:3000/Resume.pdf';
+        const fileName = 'Resume_-_Nemuel_M_Gabitanan_Jr.pdf';
+
+        saveAs(pdfUrl, fileName);
     }
+
     return (
         <Router>
             <header className="site-header">
@@ -53,11 +47,10 @@ function Header() {
                                 </li>
                             </ul>
                             <div>
-                                <Link to="http://localhost:3000/public/files/resume/Resume_-_Nemuel_M_Gabitanan_Jr.pdf" href="#" onclick={() => { fileDownload(PDF_FILE_URL) }} download className="custom-btn custom-border-btn" target="_blank">Download CV
+                                <Button onClick={fileDownload} className="custom-btn custom-border-btn">Download CV
                                     <FaArrowRight />
-                                </Link>
+                                </Button>
                             </div>
-                            <span> </span>
                             <Button className="custom-btn custom-border-btn" id="burgerbutton" onClick={handleShow}>
                                 <GiHamburgerMenu />
                             </Button>

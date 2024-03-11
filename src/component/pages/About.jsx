@@ -1,6 +1,4 @@
 import React from 'react';
-import '../css/tooplate-kool-form-pack.css';
-import 'bootstrap/dist/css/bootstrap.css';
 import Image from 'react-bootstrap/Image';
 import aboutPic from '../images/nems4.jpg';
 import aboutBG from '../images/ACVI1.jpg';

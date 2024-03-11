@@ -76,15 +76,16 @@ npm install bootstrap
 npm install react-bootstrap bootstrap
 npm install react-router-dom
 npm install react-icons --save
-npm install file-saver                  ====>uninstalled: npm uninstall file-saver
+npm install file-saver                  ====>reinstalled
 npm install hamburger-react             ====>uninstalled: npm uninstall hamburger-react
 npm i @emailjs/browser
+npm install axios
 
 ### Development plan
-pdf download
-email restriction               - done
-modal unnecesary design         - done
-burger button fix               - done
+pdf download                    - Working, refactor URL once uploaded on server
+bg video browser bug            - fixed, usable on other browsers
 media query - algorithm fix
-media query - bgm image resize
+media query - bg image resize
 programming skill list
+email Fullname fix              - fixed, space added on fullname email restriction
+email sending idle animation

@@ -1,7 +1,5 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import '../css/tooplate-kool-form-pack.css';
-import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
@@ -19,8 +17,7 @@ function MyVerticallyCenteredModal(props) {
             <Modal.Header>
             </Modal.Header>
             <Modal.Body>
-                <p>
-                    Email Successfully sent. <br />
+                <p>Email Successfully sent. <br />
                     Thank you for submitting your message. We will get back to you soon!
                 </p>
             </Modal.Body>
@@ -40,7 +37,7 @@ function Contact() {
 
     const handleNameChange = (event) => {
         const value = event.target.value;
-        if (/^[a-zA-Z@.-]*$/.test(value)) {
+        if (/^[a-zA-Z0-9@.\s-]*$/.test(value)) {
             setName(value);
         }
     };
