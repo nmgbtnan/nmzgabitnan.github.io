@@ -12,7 +12,7 @@ function Header() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const fileDownload = () => {
-        const pdfUrl = 'http://localhost:3000/Resume.pdf';
+        const pdfUrl = 'https://nmzgbtnanportfolio.vercel.app/Resume.pdf';
         const fileName = 'Resume_-_Nemuel_M_Gabitanan_Jr.pdf';
 
         saveAs(pdfUrl, fileName);
