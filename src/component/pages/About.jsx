@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'react-bootstrap/Image';
+import StackIcon from "tech-stack-icons";
 import aboutPic from '../images/nems4.jpg';
 import aboutBG from '../images/ACVI1.jpg';
 
@@ -23,26 +24,85 @@ function About() {
                     <div className="col-lg-4 mx-auto col-md-5 col-10">
                         <Image src={aboutPic} alt="This is the Primary picture" fluid />
                     </div>
-                </div>
-                <div className="row about-third">
-                    <div className="col-lg-4 col-md-4 col-12">
-                        <h3>Integer volutpat</h3>
-                        <p>Sed eu risus tincidunt, finibus dolor non, gravida ex. Donec lacinia mi nec erat tempus, vel consectetur ante scelerisque. Ut blandit, risus in venenatis ultricies, lacus tellus fermentum.</p>
-                    </div>
-                    <div className="col-lg-4 col-md-4 col-12">
-                        <h3>Mauris semper</h3>
-                        <p>Cras et nisl vestibulum, accumsan elit sed, pretium enim. Vestibulum in condimentum magna. Maecenas quam magna, iaculis eu turpis et, commodo pulvinar leo.</p>
-                    </div>
-                    <div className="col-lg-4 col-md-4 col-12">
-                        <h3>Integer id neque</h3>
-                        <p>Duis at mollis leo, venenatis congue ex. Cras urna dui, gravida euismod lectus et, cursus tempor nulla. Praesent at turpis quis ex tristique gravida quis eget eros.</p>
+                    <div className="image-wrap">
+                        <Image src={aboutBG} className="bg-img1" alt="this is an image" />
                     </div>
                 </div>
-            </div>
-            <div className="bg-img1">
-                <Image src={aboutBG} alt="this is an image" fluid />
+                <div className="row about-third ">
+                    <div className="col-md-6 col-12">
+                        <h3>Technological stacks</h3>
+                        <div className="row justify-content-evenly">
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="html5" /></div>
+                                <span><p>HTML5</p></span>
+                            </div>
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="css3" /></div>
+                                <span><p>CSS3</p></span>
+                            </div>
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="php" /></div>
+                                <span><p>PHP</p></span>
+                            </div>
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="java" /></div>
+                                <span><p>JAVA</p></span>
+                            </div>
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="jquery" /></div>
+                                <span><p>JQUERY</p></span>
+                            </div>
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="js" /></div>
+                                <span><p>JAVASCRIPT</p></span>
+                            </div>
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="bootstrap5" /></div>
+                                <span><p>BOOTSTRAP 5</p></span>
+                            </div>
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="laravel" /></div>
+                                <span><p>LARAVEL</p></span>
+                            </div>
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="mariadb" /></div>
+                                <span><p>MARIADB</p></span>
+                            </div>
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="mysql" /></div>
+                                <span><p>MYSQL</p></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-12">
+                        <h3>Collaboration tools</h3>
+                        <div className="row">
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="bash" /></div>
+                                <span><p>HTML5</p></span>
+                            </div>
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="github" /></div>
+                                <span><p>CSS3</p></span>
+                            </div>
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="prettier" /></div>
+                                <span><p>PHP</p></span>
+                            </div>
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="slack" /></div>
+                                <span><p>JAVA</p></span>
+                            </div>
+                            <div className="col ts-icon-label">
+                                <div className="ts-icon-link"><StackIcon name="vscode" /></div>
+                                <span><p>JQUERY</p></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
     );
 }
 

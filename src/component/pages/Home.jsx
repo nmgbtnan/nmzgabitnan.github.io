@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import introPic from '../images/nems3.jpg';
-import introVid from '../files/video.mp4';
+import introVid from '../files/video1.mp4';
 
 function Home() {
     return (
@@ -15,8 +15,7 @@ function Home() {
                         </div>
                         <div className="d-flex flex-column justify-content-center align-items-center col-lg-7 col-md-7 col-12">
                             <div className="hero-text">
-                                <h1 className="hero-title">👋 Hi~!! My name is Nemuel M Gabitanan Jr</h1>
-                                <h1 className="hero-title">a Gamer / Digital Nomad</h1>
+                                <h1 className="hero-title">👋 Nems, a Gamer / Digital Nomad</h1>
                                 <Link to="/" href="#" className="email-link">
                                     nemuelmgabitananjr@gmail.com
                                 </Link>
