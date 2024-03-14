@@ -72,20 +72,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### npm list
 
 npm install
+
 npm install bootstrap
+
 npm install react-bootstrap bootstrap
+
 npm install react-router-dom
+
 npm install react-icons --save
+
 npm install file-saver                  ====>reinstalled
+
 npm install hamburger-react             ====>uninstalled: npm uninstall hamburger-react
+
 npm i @emailjs/browser
+
 npm install axios
+
+npm install react-responsive --save
+
+npm install tech-stack-icons
 
 ### Development plan
 pdf download                    - Working, refactor URL once uploaded on server
-bg video browser bug            - fixed, usable on other browsers
-media query - algorithm fix
-media query - bg image resize
+
+media query - algorithm fix     - Working, refactor if a better setup is obtained.
+
+media query - bg&font resize    - Working, refactor if a better setup is obtained.
+
 programming skill list
-email Fullname fix              - fixed, space added on fullname email restriction
+
 email sending idle animation

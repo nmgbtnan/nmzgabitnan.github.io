@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -54,7 +55,7 @@ function Contact() {
         setMessage(value);
     };
 
-    
+
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -105,19 +106,33 @@ function Contact() {
                         </div>
 
                         <div className="mx-auto col-lg-4 col-md-6 col-12">
-                            <h3 className="my-4 pt-4 pt-lg-0">Say hello</h3>
+                            <h3 className="my-4 pt-4 pt-lg-0">Say Hello</h3>
                             <p>
                                 <Link to="" href="#">nemuelmgabitananjr@gmail.com<i className="fas fa-arrow-right custom-icon"></i></Link>
                             </p>
+                            <ul class="social-links mt-2">
+                                <li className="social-icon-item">
+                                    <Link to="https://www.facebook.com/shirotenshiNmz/" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaFacebook /></Link>
+                                </li>
+                                <li className="social-icon-item">
+                                    <Link to="https://github.com/nmgbtnan" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaGithub /></Link>
+                                </li>
+                                <li className="social-icon-item">
+                                    <Link to="https://www.linkedin.com/in/nemuel-gabitanan-jr-533705276/?trk=nav_responsive_tab_profile_pic&originalSubdomain=ph" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaLinkedin /></Link>
+                                </li>
+                            </ul>
                             <p className="mb-1">+63-977-103-2610</p>
                             <p className="copyright-text mt-5 pt-3">Copyright &copy; 2024 Nems Portfolio Page</p>
-                            <p>Design: <Link to="https://www.tooplate.com" href="#" title="free HTML templates" target="_blank">Tooplate</Link></p>
-                        </div>
 
+                            <p>
+                                Design: <Link to="https://www.tooplate.com" href="#" title="free HTML templates" target="_blank">Tooplate</Link><br />
+                            </p>
+                            <p>this website contains a documented source code on the owner's GitHub</p>
+                        </div>
+                        <div className="image-wrap">
+                            <Image src={contactBG} className="bg-img2" alt="this is an image" />
+                        </div>
                     </div>
-                </div>
-                <div className="bg-img2">
-                    <Image src={contactBG} alt="this is an image" fluid />
                 </div>
             </section>
             <Routes>

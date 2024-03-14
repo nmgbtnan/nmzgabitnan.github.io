@@ -24,12 +24,12 @@ function Header() {
                 <div className="container">
                     <div className="row justify-content-between">
                         <div className="col-lg-12 col-12 d-flex align-items-center">
-                            <Link to="/" className="site-header-text d-flex justify-content-center align-items-center me-auto" href="#">
-                                <BsBox />
+                            <a href="#intro" className="site-header-text d-flex justify-content-center align-items-center me-auto smoothScroll">
+                            <BsBox />
                                 <span>
                                     Nems - Portfolio
                                 </span>
-                            </Link>
+                            </a>
                             <div className="vr"></div>
 
                             <ul className="social-icon d-flex justify-content-center align-items-center mx-auto">
@@ -47,11 +47,11 @@ function Header() {
                                 </li>
                             </ul>
                             <div>
-                                <Button onClick={fileDownload} className="custom-btn custom-border-btn">Download CV
+                                <Button onClick={fileDownload} className="custom-btn custom-border-btn resume-dl-header">Download CV
                                     <FaArrowRight />
                                 </Button>
                             </div>
-                            <Button className="custom-btn custom-border-btn" id="burgerbutton" onClick={handleShow}>
+                            <Button className="custom-btn-bgr custom-border-btn" id="burgerbutton" onClick={handleShow}>
                                 <GiHamburgerMenu />
                             </Button>
                         </div>
@@ -66,13 +66,13 @@ function Header() {
                     <nav>
                         <ul>
                             <li className="nav-item">
-                                <a href="#intro" className="nav-link smoothScroll">Introduction</a>
+                                <a href="#intro" className="nav-link smoothScroll" onClick={handleClose}>Introduction</a>
                             </li>
                             <li className="nav-item">
-                                <a href="#about" className="nav-link smoothScroll">About Me</a>
+                                <a href="#about" className="nav-link smoothScroll" onClick={handleClose}>About Me</a>
                             </li>
                             <li className="nav-item">
-                                <a href="#contact" className="nav-link smoothScroll">Contact</a>
+                                <a href="#contact" className="nav-link smoothScroll" onClick={handleClose}>Contact</a>
                             </li>
                             <li className="social-icon-item">
                                 <hr />
