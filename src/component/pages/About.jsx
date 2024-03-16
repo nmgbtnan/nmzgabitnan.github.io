@@ -17,7 +17,7 @@ function About() {
                         <ul className="mt-4 mb-5 mb-lg-0 profile-list list-unstyled">
                             <li><strong>Full Name :</strong> Nemuel M Gabitanan Jr </li>
                             <li><strong>Date of Birth:</strong> February 18, 1993</li>
-                            <li><strong>Website :</strong> TBA</li>
+                            <li><strong>Website :</strong> https://nmzgbtnanportfolio.vercel.app/</li>
                             <li><strong>Email :</strong> nemuelmgabitananjr@gmail.com</li>
                         </ul>
                     </div>
@@ -46,31 +46,31 @@ function About() {
                             </div>
                             <div className="col ts-icon-label">
                                 <div className="ts-icon-link"><StackIcon name="java" /></div>
-                                <span><p>JAVA</p></span>
+                                <span><p>Java</p></span>
                             </div>
                             <div className="col ts-icon-label">
                                 <div className="ts-icon-link"><StackIcon name="jquery" /></div>
-                                <span><p>JQUERY</p></span>
+                                <span><p>Jquery</p></span>
                             </div>
                             <div className="col ts-icon-label">
                                 <div className="ts-icon-link"><StackIcon name="js" /></div>
-                                <span><p>JAVASCRIPT</p></span>
+                                <span><p>Javascript</p></span>
                             </div>
                             <div className="col ts-icon-label">
                                 <div className="ts-icon-link"><StackIcon name="bootstrap5" /></div>
-                                <span><p>BOOTSTRAP 5</p></span>
+                                <span><p>Bootstrap 5</p></span>
                             </div>
                             <div className="col ts-icon-label">
                                 <div className="ts-icon-link"><StackIcon name="laravel" /></div>
-                                <span><p>LARAVEL</p></span>
+                                <span><p>Laravel</p></span>
                             </div>
                             <div className="col ts-icon-label">
                                 <div className="ts-icon-link"><StackIcon name="mariadb" /></div>
-                                <span><p>MARIADB</p></span>
+                                <span><p>MariaDB</p></span>
                             </div>
                             <div className="col ts-icon-label">
                                 <div className="ts-icon-link"><StackIcon name="mysql" /></div>
-                                <span><p>MYSQL</p></span>
+                                <span><p>MySQL</p></span>
                             </div>
                         </div>
                     </div>
@@ -79,23 +79,23 @@ function About() {
                         <div className="row">
                             <div className="col ts-icon-label">
                                 <div className="ts-icon-link"><StackIcon name="bash" /></div>
-                                <span><p>HTML5</p></span>
+                                <span><p>Bash</p></span>
                             </div>
                             <div className="col ts-icon-label">
                                 <div className="ts-icon-link"><StackIcon name="github" /></div>
-                                <span><p>CSS3</p></span>
+                                <span><p>Github</p></span>
                             </div>
                             <div className="col ts-icon-label">
                                 <div className="ts-icon-link"><StackIcon name="prettier" /></div>
-                                <span><p>PHP</p></span>
+                                <span><p>Prettier</p></span>
                             </div>
                             <div className="col ts-icon-label">
                                 <div className="ts-icon-link"><StackIcon name="slack" /></div>
-                                <span><p>JAVA</p></span>
+                                <span><p>Slack</p></span>
                             </div>
                             <div className="col ts-icon-label">
                                 <div className="ts-icon-link"><StackIcon name="vscode" /></div>
-                                <span><p>JQUERY</p></span>
+                                <span><p>VS Code</p></span>
                             </div>
                         </div>
                     </div>

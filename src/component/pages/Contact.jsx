@@ -5,16 +5,12 @@ import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { TailSpin } from 'react-loading-icons';
 import contactBG from '../images/ACVI4.jpg';
 
 function MyVerticallyCenteredModal(props) {
     return (
-        <Modal
-            {...props}
-            size="lg"
-            aria-labelledby="contained-modal-title-vcenter"
-            centered
-        >
+        <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
             <Modal.Header>
             </Modal.Header>
             <Modal.Body>
@@ -32,9 +28,16 @@ function MyVerticallyCenteredModal(props) {
 function Contact() {
     const form = useRef();
     const [modalShow, setModalShow] = React.useState(false);
+    const [loadingShow, setLoadingShow] = React.useState(true);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+
+    const formEmailReset = () => {
+        setName('');
+        setEmail('');
+        setMessage('');
+    }
 
     const handleNameChange = (event) => {
         const value = event.target.value;
@@ -57,6 +60,7 @@ function Contact() {
 
 
     const sendEmail = (e) => {
+        setLoadingShow(false);
         e.preventDefault();
 
         emailjs
@@ -66,10 +70,13 @@ function Contact() {
             .then(
                 () => {
                     console.log('SUCCESS!');
-                    setModalShow(true)
+                    setModalShow(true);
+                    setLoadingShow(true);
+                    formEmailReset();
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
+                    setLoadingShow(true);
                 },
             );
     };
@@ -80,7 +87,7 @@ function Contact() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 col-md-6 col-12">
-                            <form ref={form} onSubmit={sendEmail} action="#" method="get" className="contact-form webform">
+                            <form ref={form} onSubmit={sendEmail} action="#" method="get" className="contact-form webform" id="contact-form">
 
                                 <div className="form-group d-flex flex-column-reverse">
                                     <input type="text" className="form-control" maxLength={50} name="cf-name" id="cf-name" placeholder="Your Name" value={name} onChange={handleNameChange} />
@@ -99,8 +106,15 @@ function Contact() {
 
                                     <label for="cf-message" className="webform-label">Message</label>
                                 </div>
-
-                                <button type="submit" className="form-control" id="submit-button" name="submit">Send</button>
+                                <div className="row">
+                                    <button type="submit" className="col form-control" id="submit-button" name="submit">
+                                        <div className="loading-icon-content" hidden={loadingShow} >
+                                            <TailSpin stroke="#000000" speed={.75} strokeWidth={5} className="col align-content-start" />
+                                            &nbsp;
+                                        </div>
+                                        Send
+                                    </button>
+                                </div>
                                 <MyVerticallyCenteredModal show={modalShow} onHide={() => setModalShow(false)} />
                             </form>
                         </div>
@@ -127,7 +141,6 @@ function Contact() {
                             <p>
                                 Design: <Link to="https://www.tooplate.com" href="#" title="free HTML templates" target="_blank">Tooplate</Link><br />
                             </p>
-                            <p>this website contains a documented source code on the owner's GitHub</p>
                         </div>
                         <div className="image-wrap">
                             <Image src={contactBG} className="bg-img2" alt="this is an image" />
