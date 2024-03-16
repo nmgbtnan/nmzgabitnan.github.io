@@ -616,8 +616,8 @@ strong {
   font-size: var(--btn-font-size);
   display: inline-block;
   margin-right: 3px;
-  width: 60px;
-  height: 60px;
+  width: 38px;
+  height: 38px;
   line-height: 36px;
   transition: background 0.2s, color 0.2s;
 }
@@ -728,9 +728,12 @@ strong {
     font-size: var(--h4-font-size);
     line-height: 0;
     margin-top: 1.8rem;
-    padding: 1.5rem 1.8rem 1.8rem 1.8rem;
+    padding: 1.2rem 1.8rem 1.2rem 1.8rem;
     white-space: nowrap;
     max-width: 140px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
 
   .contact-form #submit-button:hover {
@@ -796,21 +799,24 @@ BACKGROUND SETUP
   height: 100%;
   } 
 
-  /* .bg-img3 {
-    background-image: url('../images/overflowIMG2.jpg');
-    background-position: center center;
-    background-repeat: repeat;
-    background-size: contain;
-    top: 300%;
-    left: 0;
-    position: absolute;
-    object-fit: contain contain;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    }  */
+/*---------------------------------------
+LOADING IDLE        
+-----------------------------------------*/
+
+.loading-icon-content {
+  display:flex;
+  justify-content: left;
+  align-items: center;
+  width: 23px;
+  height: 23px;
+}
+
+.loading-icon-header {
+  justify-content: left;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+}
 
 /*---------------------------------------
   RESPONSIVE STYLES               

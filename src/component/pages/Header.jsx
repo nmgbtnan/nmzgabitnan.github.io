@@ -9,13 +9,19 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 function Header() {
     const [show, setShow] = useState(false);
+    const [loadingShow, setLoadingShow] = React.useState(true);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const fileDownload = () => {
+        setLoadingShow(false);
+        //uncomment line below prior to server upload
         const pdfUrl = 'https://nmzgbtnanportfolio.vercel.app/Resume.pdf';
+        //uncomment line below for local testing
+        // const pdfUrl = 'http://localhost:3000/Resume.pdf';
         const fileName = 'Resume_-_Nemuel_M_Gabitanan_Jr.pdf';
 
         saveAs(pdfUrl, fileName);
+        setLoadingShow(true);
     }
 
     return (
@@ -25,7 +31,7 @@ function Header() {
                     <div className="row justify-content-between">
                         <div className="col-lg-12 col-12 d-flex align-items-center">
                             <a href="#intro" className="site-header-text d-flex justify-content-center align-items-center me-auto smoothScroll">
-                            <BsBox />
+                                <BsBox />
                                 <span>
                                     Nems - Portfolio
                                 </span>
@@ -47,10 +53,16 @@ function Header() {
                                 </li>
                             </ul>
                             <div>
-                                <Button onClick={fileDownload} className="custom-btn custom-border-btn resume-dl-header">Download CV
+                                <Button onClick={fileDownload} className="custom-btn custom-border-btn resume-dl-header">
+                                    <div class="spinner-border text-warning loading-icon-header align-content-start" hidden={loadingShow} role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                        &nbsp;
+                                    </div>
+                                    Download CV
                                     <FaArrowRight />
                                 </Button>
                             </div>
+                            &nbsp;
                             <Button className="custom-btn-bgr custom-border-btn" id="burgerbutton" onClick={handleShow}>
                                 <GiHamburgerMenu />
                             </Button>

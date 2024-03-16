@@ -93,6 +93,8 @@ npm install react-responsive --save
 
 npm install tech-stack-icons
 
+npm install react-loading-icons
+
 ### Development plan
 pdf download                    - Working, refactor URL once uploaded on server
 
@@ -100,6 +102,12 @@ media query - algorithm fix     - Working, refactor if a better setup is obtaine
 
 media query - bg&font resize    - Working, refactor if a better setup is obtained.
 
-programming skill list
+programming skill list          - Working, for further revision.
 
-email sending idle animation
+Resume portfolio link           - Updated. re-check download link prior to every repository push
+
+sending & download idle icon    - Working, refactor if a better setup is obtained.
+
+form reset on sending
+
+image loading boost             
