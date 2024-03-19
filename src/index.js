@@ -7,6 +7,7 @@ import Header from '../src/component/pages/Header';
 import Home from '../src/component/pages/Home';
 import About from '../src/component/pages/About';
 import Contact from '../src/component/pages/Contact';
+import Skills from '../src/component/pages/Skills';
 import reportWebVitals from './reportWebVitals';
 
 
@@ -16,6 +17,7 @@ root.render(
     <Header />
     <Home />
     <About />
+    <Skills />
     <Contact />
   </React.StrictMode>
 );

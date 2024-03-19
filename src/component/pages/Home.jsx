@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
-import introPic from '../images/nems3.jpg';
+import introPicFB from '../images/nems3.webp';
 import introVid from '../files/video1.mp4';
 
 function Home() {
@@ -10,8 +10,12 @@ function Home() {
             <section className="hero-section d-flex justify-content-center align-items-center" id="intro">
                 <div className="container">
                     <div className="row">
-                        <div className="mx-auto col-lg-4 col-md-4 col-8">
-                            <Image src={introPic} alt="nems' Resume HTML Template" fluid />
+                        <div className="mx-auto col-lg-4 col-md-4 col-sm-5 col-8">
+                            <picture>
+                                {/* <source srcSet={introPic} className="img-fluid" type="image/webp" />
+                                <source srcSet={introPicFB} className="img-fluid" type="image/jpeg" alt="nems' Resume HTML Template" /> */}
+                                <Image src={introPicFB} alt="nems' Resume HTML Template" fluid />
+                            </picture>
                         </div>
                         <div className="d-flex flex-column justify-content-center align-items-center col-lg-7 col-md-7 col-12">
                             <div className="hero-text">
