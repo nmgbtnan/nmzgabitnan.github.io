@@ -2,11 +2,9 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
-import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { TailSpin } from 'react-loading-icons';
-import contactBG from '../images/ACVI4.jpg';
 
 function MyVerticallyCenteredModal(props) {
     return (
@@ -120,7 +118,7 @@ function Contact() {
                         </div>
 
                         <div className="mx-auto col-lg-4 col-md-6 col-12">
-                            <h3 className="my-4 pt-4 pt-lg-0">Say Hello</h3>
+                            <h2 className="my-4 pt-4 pt-lg-0">Say Hello</h2>
                             <p>
                                 <Link to="" href="#">nemuelmgabitananjr@gmail.com<i className="fas fa-arrow-right custom-icon"></i></Link>
                             </p>
@@ -136,14 +134,13 @@ function Contact() {
                                 </li>
                             </ul>
                             <p className="mb-1">+63-977-103-2610</p>
-                            <p className="copyright-text mt-5 pt-3">Copyright &copy; 2024 Nems Portfolio Page</p>
-
+                            <p className="copyright-text mt-3 pt-2">Copyright &copy; 2024 Nems Portfolio Page</p>
                             <p>
                                 Design: <Link to="https://www.tooplate.com" href="#" title="free HTML templates" target="_blank">Tooplate</Link><br />
                             </p>
                         </div>
                         <div className="image-wrap">
-                            <Image src={contactBG} className="bg-img2" alt="this is an image" />
+                            <picture className="bg-img3" />
                         </div>
                     </div>
                 </div>

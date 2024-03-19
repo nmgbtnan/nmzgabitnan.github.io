@@ -41,6 +41,7 @@ function Header() {
                             <ul className="social-icon d-flex justify-content-center align-items-center mx-auto">
                                 <span><a href="#intro" className="smoothScroll site-header-text me-4 d-none d-lg-block">Introduction</a></span>
                                 <span><a href="#about" className="smoothScroll site-header-text me-4 d-none d-lg-block">About</a></span>
+                                <span><a href="#skills" className="smoothScroll site-header-text me-4 d-none d-lg-block">Skills</a></span>
                                 <span><a href="#contact" className="smoothScroll site-header-text me-4 d-none d-lg-block">Contact Me</a></span>
                                 <li className="social-icon-item">
                                     <Link to="https://www.facebook.com/shirotenshiNmz/" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaFacebook /></Link>
@@ -82,6 +83,9 @@ function Header() {
                             </li>
                             <li className="nav-item">
                                 <a href="#about" className="nav-link smoothScroll" onClick={handleClose}>About Me</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="#skills" className="nav-link smoothScroll" onClick={handleClose}>Skills</a>
                             </li>
                             <li className="nav-item">
                                 <a href="#contact" className="nav-link smoothScroll" onClick={handleClose}>Contact</a>

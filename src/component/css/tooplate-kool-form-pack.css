@@ -25,7 +25,7 @@ Bootstrap 5 Form Pack Template
   --p-color:                      #b9b9b9;
   --link-hover-color:             #F2CC8F;
   --header-fcolor:                #dfdfdf; /*additional*/
-  --opaque-bgcolor:               rgba(0, 0, 0, 0.40); /*additional*/ 
+  --opaque-bgcolor:               rgba(0, 0, 0, 0.60); /*additional*/ 
 
   --body-font-family:             'Poppins', sans-serif;
   --heading-font-family:          'Unbounded', sans-serif;
@@ -54,6 +54,7 @@ Bootstrap 5 Form Pack Template
   --font-weight-light:            300;
 
 }
+
 
 body {
   background-color: var(--body-bg-color);
@@ -146,6 +147,8 @@ strong {
 .section-padding {
   padding-top: 100px;
   padding-bottom: 100px;
+  width: 100%;
+  min-height: 100vh;
 }
 
 ::selection {
@@ -329,7 +332,7 @@ strong {
 }
 
 .hero-bg {
-  background-image: url('../images/ACVI1.jpg');
+  background-image: url('../images/ACVI1.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -378,6 +381,13 @@ strong {
   /* max-height: 70px; */
 }
 
+.skills .container {
+  background-color: var(--opaque-bgcolor);
+  border-radius: var(--border-radius-small);
+  padding: 15px 25px;
+  /* max-height: 70px; */
+}
+
 .about-image {
   border-radius: var(--border-radius-medium);
 }
@@ -386,9 +396,13 @@ strong {
   border-radius: var(--border-radius-medium);
 }
 
-.container h3 {
+.container h3, .container h2, .container h1, .container h4, .container h5 {
   color: var(--header-fcolor);
 }
+
+/* .container h2 {
+  color: var(--header-fcolor);
+} */
 
 /*additional*/
 
@@ -636,6 +650,9 @@ strong {
 /*---------------------------------------
      CONTACT               
   -----------------------------------------*/
+  .contact {
+    margin-bottom:0vmax;
+  }
 
   .contact .container {
     background-color: var(--opaque-bgcolor);
@@ -768,10 +785,10 @@ BACKGROUND SETUP
 }
 
 .bg-img1 {
-  /* background-image: url(../images/ACVI1.jpg);
+  background-image: url(../images/ACVI1.webp), url(../images/ACVI1.jpg);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
   top: 100%;
   left: 0;
   position: absolute;
@@ -780,23 +797,39 @@ BACKGROUND SETUP
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .bg-img2 {
-  /* background-image: url(../images/ACVI4.jpg);
+  background-image: url(../images/ACVI2.webp), url(../images/ACVI2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain; */
+  background-size: cover;
   top: 200%;
   left: 0;
   position: absolute;
   object-fit: contain contain;
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  } 
+
+  .bg-img3 {
+    background-image: url(../images/ACVI4.webp), url(../images/ACVI4.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 300%;
+    left: 0;
+    position: absolute;
+    object-fit: contain contain;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
   } 
 
 /*---------------------------------------
