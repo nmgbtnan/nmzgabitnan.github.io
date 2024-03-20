@@ -38,7 +38,8 @@ Bootstrap 5 Form Pack Template
   --h6-font-size:                 20px;
   --p-font-size:                  18px;
   --p-font-size-m:                14px;
-  --p-font-size-s:                10px;
+  --p-font-size-s:                12px;
+  --p-font-size-xs:               10px;
   --base-font-size:               16px;
   --menu-font-size:               16px;
   --btn-font-size:                14px;
@@ -934,20 +935,20 @@ LOADING IDLE
     font-size: var(--btn-font-size);
     display: inline-block;
     margin-right: 3px;
-    width: 55px;
-    height: 55px;
-    line-height: 36px;
+    width: 45px;
+    height: 45px;
+    line-height: 46px;
     transition: background 0.2s, color 0.2s;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   h1 {
-    font-size: 33px;
+    font-size: 27px;
   }
 
   h2 {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   h3 {
@@ -981,9 +982,9 @@ LOADING IDLE
     font-size: var(--btn-font-size);
     display: inline-block;
     margin-right: 3px;
-    width: 55px;
-    height: 55px;
-    line-height: 36px;
+    width: 45px;
+    height: 45px;
+    line-height: 46px;
     transition: background 0.2s, color 0.2s;
   }
 
@@ -995,11 +996,11 @@ LOADING IDLE
 
 @media (min-width: 576px) and (max-width: 767px) {
   h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   h2 {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   h3 {
@@ -1017,13 +1018,28 @@ LOADING IDLE
   h6 {
     font-size: 10px;
   }
+
+  .hero-title, .email-link {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-weight-medium);
+    }
+
+  .webform-label {
+    font-size: var(--p-font-size-xs);
+    font-weight: var(--font-weight-light);
+  }
+
+  .contact-form .form-control {
+    font-size: var(--p-font-size-s);
+    font-weight: var(--font-weight-light);
+  }
   
   p {
-    font-size: var(--p-font-size-m);
+    font-size: var(--p-font-size-s);
     font-weight: var(--font-weight-light);
   }
   ul li {
-    font-size: var(--p-font-size-m);
+    font-size: var(--p-font-size-s);
     font-weight: var(--font-weight-light);
   }
 
@@ -1033,9 +1049,9 @@ LOADING IDLE
     font-size: var(--btn-font-size);
     display: inline-block;
     margin-right: 3px;
-    width: 35px;
-    height: 35px;
-    line-height: 36px;
+    width: 25px;
+    height: 25px;
+    line-height: 26px;
     transition: background 0.2s, color 0.2s;
   }
 
@@ -1047,11 +1063,11 @@ LOADING IDLE
 
 @media screen and (max-width: 575px) {
   h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   h2 {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   h3 {
@@ -1068,6 +1084,21 @@ LOADING IDLE
 
   h6 {
     font-size: 10px;
+  }
+
+  .hero-title, .email-link {
+	font-size: var(--h4-font-size);
+  font-weight: var(--font-weight-medium);
+  }
+
+  .webform-label {
+    font-size: var(--p-font-size-xs);
+    font-weight: var(--font-weight-light);
+  }
+
+  .contact-form .form-control {
+    font-size: var(--p-font-size-s);
+    font-weight: var(--font-weight-light);
   }
   
   .site-header .social-icon{
@@ -1083,11 +1114,11 @@ LOADING IDLE
   }
 
   p {
-    font-size: var(--p-font-size-m);
+    font-size: var(--p-font-size-s);
     font-weight: var(--font-weight-light);
   }
   ul li {
-    font-size: var(--p-font-size-m);
+    font-size: var(--p-font-size-s);
     font-weight: var(--font-weight-light);
   }
 
@@ -1097,10 +1128,14 @@ LOADING IDLE
     font-size: var(--btn-font-size);
     display: inline-block;
     margin-right: 3px;
-    width: 35px;
-    height: 35px;
-    line-height: 36px;
+    width: 25px;
+    height: 25px;
+    line-height: 26px;
     transition: background 0.2s, color 0.2s;
+  }
+
+  .hero-email-icon {
+    display: hidden;
   }
 
   #burgerbutton {

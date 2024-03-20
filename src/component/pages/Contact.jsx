@@ -1,8 +1,11 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaFacebook, FaLinkedin, FaViber, FaRegSmileWink } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 import Button from 'react-bootstrap/Button';
+import Overlay from 'react-bootstrap/Overlay';
+import Tooltip from 'react-bootstrap/Tooltip';
 import Modal from 'react-bootstrap/Modal';
 import { TailSpin } from 'react-loading-icons';
 
@@ -79,6 +82,26 @@ function Contact() {
             );
     };
 
+    const target = useRef(null);
+
+    const [copied, setCopied] = useState(false);
+    const copyToClipboardContact = () => {
+        navigator.clipboard.writeText('nemuelmgabitananjr@gmail.com');
+        setCopied(true);
+        setTimeout(() => {
+            setCopied(false);
+        }, 2000);
+    };
+
+    const [copied2, setCopied2] = useState(false);
+    const copyToClipboardContactNumber = () => {
+        navigator.clipboard.writeText('+639771032610');
+        setCopied2(true);
+        setTimeout(() => {
+            setCopied2(false);
+        }, 2000);
+    };
+
     return (
         <Router>
             <section className="contact section-padding" id="contact">
@@ -120,20 +143,43 @@ function Contact() {
                         <div className="mx-auto col-lg-4 col-md-6 col-12">
                             <h2 className="my-4 pt-4 pt-lg-0">Say Hello</h2>
                             <p>
-                                <Link to="" href="#">nemuelmgabitananjr@gmail.com<i className="fas fa-arrow-right custom-icon"></i></Link>
+                                <Link to="/" href="" ref={target} onClick={copyToClipboardContact} title="click to copy this email link">
+                                    <MdOutlineEmail /> nemuelmgabitananjr@gmail.com
+                                </Link>
+                                <Overlay target={target.current} show={copied} placement="right">
+                                    {(props) => (
+                                        <Tooltip id="overlay-example" {...props}>
+                                            Email link copied
+                                        </Tooltip>
+                                    )}
+                                </Overlay>
+                            </p>
+                            <p>Hi there! Have a project proposal, want to discuss some collaboration opportunities, want to hire me, or simply want to say hi?
+                                Feel free to drop me a message using the email form provided or via my viber phone number provided below.
+                                I am looking forward to our collaboration together~! <FaRegSmileWink /></p>
+                            <p className="mb-1">
+                                <Link to="/" href="" ref={target} onClick={copyToClipboardContactNumber} title="click to copy this viber phone number">
+                                    <FaViber /> +63-977-103-2610
+                                </Link>
+                                <Overlay target={target.current} show={copied2} placement="right">
+                                    {(props) => (
+                                        <Tooltip id="overlay-example" {...props}>
+                                            Email link copied
+                                        </Tooltip>
+                                    )}
+                                </Overlay>
                             </p>
                             <ul class="social-links mt-2">
                                 <li className="social-icon-item">
-                                    <Link to="https://www.facebook.com/shirotenshiNmz/" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaFacebook /></Link>
+                                    <Link to="https://www.facebook.com/shirotenshiNmz/" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer" title="Facebook profile"><FaFacebook /></Link>
                                 </li>
                                 <li className="social-icon-item">
-                                    <Link to="https://github.com/nmgbtnan" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaGithub /></Link>
+                                    <Link to="https://github.com/nmgbtnan" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer" title="Github profile"><FaGithub /></Link>
                                 </li>
                                 <li className="social-icon-item">
-                                    <Link to="https://www.linkedin.com/in/nemuel-gabitanan-jr-533705276/?trk=nav_responsive_tab_profile_pic&originalSubdomain=ph" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaLinkedin /></Link>
+                                    <Link to="https://www.linkedin.com/in/nemuel-gabitanan-jr-533705276/?trk=nav_responsive_tab_profile_pic&originalSubdomain=ph" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer" title="LinkedIn profile"><FaLinkedin /></Link>
                                 </li>
                             </ul>
-                            <p className="mb-1">+63-977-103-2610</p>
                             <p className="copyright-text mt-3 pt-2">Copyright &copy; 2024 Nems Portfolio Page</p>
                             <p>
                                 Design: <Link to="https://www.tooplate.com" href="#" title="free HTML templates" target="_blank">Tooplate</Link><br />
