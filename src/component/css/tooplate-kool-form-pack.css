@@ -60,6 +60,7 @@ Bootstrap 5 Form Pack Template
 body {
   background-color: var(--body-bg-color);
   background-image: url(../images/overflowIMG2.jpg);
+  /* background-position: center; */
   font-family: var(--body-font-family); 
 }
 
@@ -1132,10 +1133,6 @@ LOADING IDLE
     height: 25px;
     line-height: 26px;
     transition: background 0.2s, color 0.2s;
-  }
-
-  .hero-email-icon {
-    display: hidden;
   }
 
   #burgerbutton {
