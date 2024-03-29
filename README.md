@@ -71,7 +71,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### npm list
 
-npm install
+npm install                            ====> current install method: npm install --save --save-exact react-scripts@5.0.1
 
 npm install bootstrap
 

@@ -44,10 +44,10 @@ function Header() {
                                 <span><a href="#skills" className="smoothScroll site-header-text me-4 d-none d-lg-block">Skills</a></span>
                                 <span><a href="#contact" className="smoothScroll site-header-text me-4 d-none d-lg-block">Contact Me</a></span>
                                 <li className="social-icon-item">
-                                    <Link to="https://www.facebook.com/shirotenshiNmz/" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaFacebook /></Link>
+                                    <Link to="https://www.facebook.com/shirotenshiNmz/" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer" title="Facebook profile"><FaFacebook /></Link>
                                 </li>
                                 <li className="social-icon-item">
-                                    <Link to="https://github.com/nmgbtnan" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaGithub /></Link>
+                                    <Link to="https://github.com/nmgbtnan" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer" title="Github profile"><FaGithub /></Link>
                                 </li>
                                 <li className="social-icon-item">
                                     <Link to="https://www.linkedin.com/in/nemsgabitananjr/" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaLinkedin /></Link>
