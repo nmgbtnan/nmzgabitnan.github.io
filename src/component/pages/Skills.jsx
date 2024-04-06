@@ -100,7 +100,7 @@ function Skills () {
                             </div>
                             <div className="col col-sm-2 ts-icon-label">
                                 <div className="ts-icon-link"><Image src={tviewerIcon} fluid /></div>
-                                <span><p>Team Viewer</p></span>
+                                <span><p>TeamViewer</p></span>
                             </div>
                             <div className="col col-sm-2 ts-icon-label">
                                 <div className="ts-icon-link"><Image src={gsuitIcon} fluid /></div>
