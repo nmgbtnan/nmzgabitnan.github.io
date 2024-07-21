@@ -50,7 +50,7 @@ function Header() {
                                     <Link to="https://github.com/nmgbtnan" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer" title="Github profile"><FaGithub /></Link>
                                 </li>
                                 <li className="social-icon-item">
-                                    <Link to="https://www.linkedin.com/in/nemuel-gabitanan-jr-533705276/?trk=nav_responsive_tab_profile_pic&originalSubdomain=ph" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer" title="Linkedin profile"><FaLinkedin /></Link>
+                                    <Link to="https://www.linkedin.com/in/nemsgabitananjr/" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaLinkedin /></Link>
                                 </li>
                             </ul>
                             <div>
@@ -96,7 +96,7 @@ function Header() {
                                 <br />
                                 <Link to="https://www.facebook.com/shirotenshiNmz/" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaFacebook /></Link>
                                 <Link to="https://github.com/nmgbtnan" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaGithub /></Link>
-                                <Link to="https://www.linkedin.com/in/nemuel-gabitanan-jr-533705276/?trk=nav_responsive_tab_profile_pic&originalSubdomain=ph" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaLinkedin /></Link>
+                                <Link to="https://www.linkedin.com/in/nemsgabitananjr/" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer"><FaLinkedin /></Link>
                             </li>
                         </ul>
                     </nav>

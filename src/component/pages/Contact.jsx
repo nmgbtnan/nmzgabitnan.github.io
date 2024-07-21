@@ -108,22 +108,22 @@ function Contact() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 col-md-6 col-12">
-                            <form ref={form} onSubmit={sendEmail} action="#" method="get" className="contact-form webform" id="contact-form">
-
+                            <form ref={form} onSubmit={sendEmail} action="#" method="get" className="contact-form webform needs-validation" id="contact-form" novalidate>
+ need
                                 <div className="form-group d-flex flex-column-reverse">
-                                    <input type="text" className="form-control" maxLength={50} name="cf-name" id="cf-name" placeholder="Your Name" value={name} onChange={handleNameChange} />
+                                    <input type="text" className="form-control" maxLength={50} name="cf-name" id="cf-name" placeholder="Your Name" value={name} onChange={handleNameChange} required />
 
                                     <label for="cf-name" className="webform-label">Full Name</label>
                                 </div>
 
                                 <div className="form-group d-flex flex-column-reverse">
-                                    <input type="email" className="form-control" maxLength={50} name="cf-email" id="cf-email" placeholder="Your Email" value={email} onChange={handleEmailChange} />
+                                    <input type="email" className="form-control" maxLength={50} name="cf-email" id="cf-email" placeholder="Your Email" value={email} onChange={handleEmailChange} required />
 
                                     <label for="cf-email" className="webform-label">Email</label>
                                 </div>
 
                                 <div className="form-group d-flex flex-column-reverse">
-                                    <textarea className="form-control" maxLength={254} rows="5" name="cf-message" id="cf-message" placeholder="Your Message" value={message} onChange={handleMessageBoxChange}></textarea>
+                                    <textarea className="form-control" maxLength={254} rows="5" name="cf-message" id="cf-message" placeholder="Your Message" value={message} onChange={handleMessageBoxChange} required ></textarea>
 
                                     <label for="cf-message" className="webform-label">Message</label>
                                 </div>
@@ -177,7 +177,7 @@ function Contact() {
                                     <Link to="https://github.com/nmgbtnan" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer" title="Github profile"><FaGithub /></Link>
                                 </li>
                                 <li className="social-icon-item">
-                                    <Link to="https://www.linkedin.com/in/nemuel-gabitanan-jr-533705276/?trk=nav_responsive_tab_profile_pic&originalSubdomain=ph" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer" title="LinkedIn profile"><FaLinkedin /></Link>
+                                    <Link to="hhttps://www.linkedin.com/in/nemsgabitananjr/" href="#" target="_blank" className="social-icon-link" rel="noopener noreferrer" title="LinkedIn profile"><FaLinkedin /></Link>
                                 </li>
                             </ul>
                             <p className="copyright-text mt-3 pt-2">Copyright &copy; 2024 Nems Portfolio Page</p>
